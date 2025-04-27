@@ -15,6 +15,7 @@ export const Main = () => {
 
   return (
     <Box className={classes.root}>
+      <div>Курьеры</div>
       {step === StepsEnum.start && <Start setStep={setStep} />}
       {step === StepsEnum.result && <Result />}
     </Box>

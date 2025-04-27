@@ -13,6 +13,7 @@ export const Clients = () => {
 
   return (
     <Box className={classes.root}>
+      <div>Клиенты</div>
       {step === StepsEnum.start && <Start setStep={setStep} />}
       {step === StepsEnum.result && <Result />}
     </Box>

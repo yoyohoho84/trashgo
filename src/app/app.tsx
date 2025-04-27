@@ -13,10 +13,12 @@ import './styles/common.scss';
 
 const root = createRoot(document.getElementById('root') as HTMLElement);
 
+const basename = import.meta.env.PROD ? '/trashgo' : '/';
+
 root.render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <MantineProvider theme={MANTINE_THEME}>
           <Router />
         </MantineProvider>
